@@ -4,4 +4,6 @@ document.addEventListener('click', () => {
   clicks++
 });
 
-const getClicks = () => { document.write(clicks) };
+document.querySelector('#btn').addEventListener('click', () => {
+  document.write(clicks)
+});

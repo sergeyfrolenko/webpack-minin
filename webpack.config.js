@@ -7,7 +7,8 @@ module.exports = {
     analytics: './analytics.js'
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'public')
-  }
+  },
+  devtool: "source-map"
 }
