@@ -1,0 +1,6 @@
+.block {
+  min-height: 100px;
+  max-width: 300px;
+  background: aqua;
+  margin-top: 10px;
+}

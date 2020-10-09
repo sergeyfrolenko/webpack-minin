@@ -81,38 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/analytics.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./main.js":
-/*!*****************!*\
-  !*** ./main.js ***!
-  \*****************/
+/***/ "./src/analytics.js":
+/*!**************************!*\
+  !*** ./src/analytics.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.querySelector('#addDetermine').addEventListener('click', (e) => {
-  e.preventDefault();
-  const determine = document.querySelector('#inputText').value;
-  const description = document.querySelector('#inputDesc').value;
+let clicks = 0;
 
-  const block = document.createElement('div')
-  block.classList.add('block');
-
-  const det = document.createElement('p');
-  det.innerText = determine;
-  const desc = document.createElement('p');
-  desc.innerText = description;
-
-  block.append(det);
-  block.append(desc);
-
-  document.querySelector('#lib').append(block);
+document.addEventListener('click', () => {
+  clicks++
 });
+
+document.querySelector('#btn').addEventListener('click', () => {
+  document.write(clicks)
+});
+
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=analytics.7214ec039177320cf9c9.js.map
